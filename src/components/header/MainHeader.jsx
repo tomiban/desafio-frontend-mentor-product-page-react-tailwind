@@ -16,9 +16,9 @@ const MainHeader = () => {
 
 	return (
 		<>
-			<header className='container max-w-[79rem]  mx-auto flex items-center gap-4 p-6 md:p-0'>
+			<header className='container mx-auto  flex max-w-[79rem] items-center gap-4 p-6 md:p-0 '>
 				<button
-					className='md:hidden z-10'
+					className='z-20 md:hidden'
 					onClick={handleClickMenu}>
 					{toggleMenu ? <CloseMenuIcon /> : <MenuIcon />}
 				</button>
@@ -30,10 +30,10 @@ const MainHeader = () => {
 				<nav
 					className={`${
 						!toggleMenu && "-translate-x-full"
-					} absolute left-0 top-0 h-full w-3/5 pt-[6.1rem] px-10 gap-y-4 flex flex-col justify-start font-bold bg-white transform transition-transform ease-in-out duration-300 ${
+					} absolute left-0 top-0 z-10 flex h-full w-3/5 transform flex-col justify-start gap-y-4 bg-white px-10 pt-[6.1rem] font-bold transition-transform duration-300 ease-in-out ${
 						toggleMenu && "translate-x-0"
-					} md:static md:translate-x-0 md:flex-row md:mr-auto md:gap-5 md:pt-0 `}>
-					<NavLinks  />
+					} md:static md:mr-auto md:translate-x-0 md:flex-row md:gap-5 md:pt-0 `}>
+					<NavLinks />
 				</nav>
 
 				<div className='flex space-x-4'>
@@ -48,7 +48,7 @@ const MainHeader = () => {
 					/>
 				</div>
 			</header>
-			<span className=" mx-auto px-6 hidden h-[0.1em] bg-gray-200 w-full container md:block 2xl:w-[1500px] "></span>
+			<span className='container mx-auto hidden h-[0.1em] w-full bg-gray-200 px-6 md:block 2xl:w-[1500px] '></span>
 		</>
 	);
 };

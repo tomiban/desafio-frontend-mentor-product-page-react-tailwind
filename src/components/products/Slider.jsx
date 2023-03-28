@@ -26,23 +26,23 @@ const Slider = () => {
 			? setImgIndex(IMGS_SLIDER.length - 1)
 			: setImgIndex(imgIndex - 1);
 	};
-	
+
 	return (
-		<section className='grid md:grid-cols-4 gap-4'>
-			<div className='col-span-4 aspect-[16/12] relative'>
+		<section className='grid gap-4 md:grid-cols-4'>
+			<div className='w-100 relative col-span-4 aspect-[16/13]'>
 				<img
 					src={IMGS_SLIDER[imgIndex]}
 					alt='dasdas'
 				/>
-				<div className='absolute top-1/2 left-0 -translate-y-1 flex justify-between w-full px-4'>
+				<div className='absolute top-1/2 left-0 flex w-full -translate-y-1 justify-between px-4'>
 					<button
 						onClick={handleClickSliderPrev}
-						className='bg-white h-12 w-12 rounded-full grid place-items-center'>
+						className='grid h-12 w-12 place-items-center rounded-full bg-white'>
 						<PrevIcon />
 					</button>
 					<button
 						onClick={handleClickSliderNext}
-						className='bg-white h-12 w-12 rounded-full grid place-items-center'>
+						className='grid h-12 w-12 place-items-center rounded-full bg-white'>
 						<NextIcon />
 					</button>
 				</div>
